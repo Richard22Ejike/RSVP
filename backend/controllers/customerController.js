@@ -6,14 +6,15 @@ const mongoose = require('mongoose');
 
 const createCustomer = asyncHandler(async (req, res) => {
   console.log('friends');
-  const { email, name, phone, gender } = req.body;
+  const { email, name, phone, gender, preference} = req.body;
 
   try {
     const customer = await Customer.create({
       name,
       email,
       phone,
-      gender
+      gender,
+      preference
     });
 
     console.log(customer);

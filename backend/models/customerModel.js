@@ -26,6 +26,10 @@ const customerSchema = mongoose.Schema(
       type: String,
       default: "",
     },
+    preference: {
+      type: String,
+      default: "",
+    },
   },
   {
     timestamps: true,

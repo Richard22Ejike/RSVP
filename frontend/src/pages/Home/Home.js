@@ -15,6 +15,7 @@ const Home = () => {
     email: "",
     phone: "",
     gender: "",
+    preference: "", // Add preference to formData
   });
   const [modalMessage, setModalMessage] = useState("");
 
@@ -34,7 +35,6 @@ const Home = () => {
       setModalMessage(response.message || "Successfully registered!");
     } catch (error) {
       setIsLoading(false);
-      
     }
   };
 
@@ -144,6 +144,22 @@ const Home = () => {
                   <option value="other">Other</option>
                 </select>
               </div>
+              <div className="form-group">
+                <label htmlFor="preference">Dietary Preference:</label>
+                <select
+                  id="preference"
+                  name="preference"
+                  value={formData.preference}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Preference</option>
+                  <option value="gluten-free">Gluten Free</option>
+                  <option value="dairy-free">Dairy Free</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="normal">Normal</option>
+                </select>
+              </div>
               <button type="submit" className="--btn --btn-primary">Submit</button>
             </form>
           </div>
@@ -156,8 +172,8 @@ const Home = () => {
 const NumberText = ({ num, text }) => {
   return (
     <div className="--mr">
-      <h3 className="--color-dark">{num}</h3>
-      <p className="--color-dark">{text}</p>
+      <h3 className="">{num}</h3>
+      <p className="">{text}</p>
     </div>
   );
 };

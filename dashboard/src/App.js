@@ -38,7 +38,7 @@ function App() {
     <BrowserRouter>
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot" element={<Forgot />} />
@@ -55,7 +55,7 @@ function App() {
           }
         />
         <Route
-          path="/add-product"
+          path="/add-customer"
           element={
             <Sidebar>
               <Layout>
@@ -65,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/product-detail/:id"
+          path="/customer-detail/:id"
           element={
             <Sidebar>
               <Layout>
@@ -75,7 +75,7 @@ function App() {
           }
         />
         <Route
-          path="/edit-product/:id"
+          path="/edit-customer/:id"
           element={
             <Sidebar>
               <Layout>

@@ -115,17 +115,17 @@ const customerSlice = createSlice({
   reducers: {
     CALC_WOMEN(state, action) {
       const customers = action.payload;
-      let count = customers.filter((item) => item.gender === "Female").length;
+      let count = customers.filter((item) => item.gender === "female").length;
       state.women = count;
     },
     CALC_MEN(state, action) {
       const customers = action.payload;
-      let count = customers.filter((item) => item.gender === "Male").length;
+      let count = customers.filter((item) => item.gender === "male").length;
       state.men = count;
     },
     CALC_NORMAL(state, action) {
       const customers = action.payload;
-      let count = customers.filter((item) => item.preference === "Normal").length;
+      let count = customers.filter((item) => item.preference === "normal").length;
       state.preference = count;
     },
   },

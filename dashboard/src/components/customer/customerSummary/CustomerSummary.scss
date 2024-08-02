@@ -1,14 +1,18 @@
-.product-summary {
+.customer-summary {
   width: 100%;
+
   .info-summary {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; // Prevent wrapping
+    overflow-x: auto; // Enable horizontal scrolling if needed
+    gap: 1rem; // Space between items
+    align-items: center; // Center align items vertically
+    padding: 1rem; // Optional: Add padding if needed
   }
 }
 
 .card {
   border: 1px solid #ccc;
-  // border-bottom: 3px solid var(--light-blue);
   padding: 5px;
   background-color: #f5f6fa;
 }
@@ -16,12 +20,15 @@
 .card1 {
   background-color: #b624ff;
 }
+
 .card2 {
   background-color: #32963d;
 }
+
 .card3 {
   background-color: #c41849;
 }
+
 .card4 {
   background-color: #03a5fc;
 }

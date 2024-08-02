@@ -21,7 +21,10 @@ import { Link } from "react-router-dom";
 const CustomerList = ({ customers, isLoading }) => {
   const [search, setSearch] = useState("");
   const filteredCustomers = useSelector(selectFilteredCustomers);
+  console.log(filteredCustomers);
 
+  const state = useSelector((state) => state);
+  console.log('Entire State:', state);
   const dispatch = useDispatch();
 
   const shortenText = (text, n) => {
@@ -123,16 +126,6 @@ const CustomerList = ({ customers, isLoading }) => {
                       <td>{gender}</td>
                       <td>{preference}</td>
                       <td className="icons">
-                        <span>
-                          <Link to={`/customer-detail/${_id}`}>
-                            <AiOutlineEye size={25} color={"purple"} />
-                          </Link>
-                        </span>
-                        <span>
-                          <Link to={`/edit-customer/${_id}`}>
-                            <FaEdit size={20} color={"green"} />
-                          </Link>
-                        </span>
                         <span>
                           <FaTrashAlt
                             size={20}

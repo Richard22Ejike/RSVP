@@ -4,12 +4,14 @@ const initialState = {
   filteredCustomers: [],
 };
 
-const customerSlice = createSlice({
-  name: "customer",
+const filterSlice = createSlice({
+  name: "filter",
   initialState,
   reducers: {
     FILTER_CUSTOMERS(state, action) {
       const { customers, search } = action.payload;
+      console.log('Customers:', customers);
+      console.log('Search:', search);
       const tempCustomers = customers.filter(
         (customer) =>
           customer.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -24,8 +26,8 @@ const customerSlice = createSlice({
   },
 });
 
-export const { FILTER_CUSTOMERS } = customerSlice.actions;
+export const { FILTER_CUSTOMERS } = filterSlice.actions;
 
-export const selectFilteredCustomers = (state) => state.customer.filteredCustomers;
+export const selectFilteredCustomers = (state) => state.filter.filteredCustomers;
 
-export default customerSlice.reducer;
+export default filterSlice.reducer;

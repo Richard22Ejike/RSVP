@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 // Add the CORS middleware and configure the allowed origins
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://rsvp-nbhy.onrender.com"],
+    origin: ["http://localhost:3000", "https://rsvp-nbhy.onrender.com","https://rsvp-dashboard-dbl9.onrender.com"],
     credentials: true,
   })
 );

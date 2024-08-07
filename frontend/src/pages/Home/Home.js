@@ -87,7 +87,7 @@ const Home = () => {
               <Countdown date={eventDate} renderer={renderer} />
             </div>
             <div className="--flex-start">
-              <NumberText num="DATE" text="SATURDAY, AUGUST 24TH, 2024" />
+              <NumberText num="DATE" text="SATURDAY, OCTOBER 18TH, 2024" />
               <NumberText num="VENUE" text="ATLAS HOTEL REGINA" />
               <NumberText num="Time" text="6:00 PM - 9:00 PM" />
             </div>

@@ -42,7 +42,7 @@ const Home = () => {
     setModalMessage("");
   };
 
-  const eventDate = new Date("2024-08-24T18:00:00");
+  const eventDate = new Date("2024-09-18T18:00:00");
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
